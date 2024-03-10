@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -97,6 +98,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "bread-bitacora-front:build:production",
+              "serveTarget": "bread-bitacora-front:serve:production"
+            },
+            "development": {
+              "buildTarget": "bread-bitacora-front:build:development",
+              "serveTarget": "bread-bitacora-front:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

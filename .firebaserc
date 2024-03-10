@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bread-bitacora": {
+      "hosting": {
+        "bread-bitacora-front": [
+          "bread-bitacora"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bread-bitacora"
+  }
+}
